@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Jogos</title>
+      <!-- Fonte Google Inria Serif -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet"> 
+  
+      <!-- Fonte Google Inter semiBold -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:ital,opsz,wght@1,14..32,509&display=swap" rel="stylesheet">
+  
+
+
+    <link rel="stylesheet" href="/src/css/style.css">
+</head>
+<body>
+    <!-- Container header -->
+    <div class="container"> 
+        <header>
+            <div class="logo">
+                <span><img src="src/img/logoControle.png" alt="imgControle"></span>
+                <h1 class="titulo">Code<br>Game</h1>
+            </div>
+            <!-- Modal Cadastrar -->
+            <button id="openModal" class="open-modal-button">Cadastrar</button>
+            <div id="modal" class="modal">
+                <div class="modal-content">
+                    <header class="modal-header">
+                        <button id="closeModal" class="close-button">&larr;</button>
+                        <div class="modal-logo"><img src="/src/img/logoControle.png" alt="modal-logo"></div>
+                    </header>
+                    
+                    <h2>Novo Jogo</h2>
+                    <form>
+                        <div class="form-row">
+                            <input type="text" placeholder="Nome">
+                            <input type="text" placeholder="Categoria">
+                        </div>
+                        <div class="form-row">
+                            <input type="text" placeholder="Classificação">
+                            <input type="text" placeholder="Avaliação">
+                        </div>
+                        <div class="form-row">
+                            <input type="text" placeholder="Lançamento">
+                            <input type="text" placeholder="Descrição">
+                        </div>
+                        <button type="submit" class="confirm-button">Confirmar</button>
+                    </form>
+                </div>
+            </div>
+        
+            <script src="/src/js/script.js"></script>
+        </header>
+
+        <main>
+            <h2>Catálogo de Jogos</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Categoria</th>
+                        <th>Classificação</th>
+                        <th>Avaliação</th>
+                        <th>Lançamento</th>
+                        <th>Opções</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>EA SPORTS FC 25</td>
+                        <td>Esporte</td>
+                        <td><span class="rating green">L</span></td>
+                        <td>8/10</td>
+                        <td>2024</td>
+                        <td class="actions">
+                            <button>👁️</button>
+                            <button>✏️</button>
+                            <button>🗑️</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Call of Duty: Warzone</td>
+                        <td>Battle Royale</td>
+                        <td><span class="rating black">18</span></td>
+                        <td>8/10</td>
+                        <td>2020</td>
+                        <td class="actions">
+                            <button>👁️</button>
+                            <button>✏️</button>
+                            <button>🗑️</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Grand Theft Auto V</td>
+                        <td>Ação</td>
+                        <td><span class="rating black">18</span></td>
+                        <td>9/10</td>
+                        <td>2013</td>
+                        <td class="actions">
+                            <button>👁️</button>
+                            <button>✏️</button>
+                            <button>🗑️</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>The Last of Us</td>
+                        <td>Ação/Aventura</td>
+                        <td><span class="rating red">16</span></td>
+                        <td>9/10</td>
+                        <td>2014</td>
+                        <td class="actions">
+                            <button>👁️</button>
+                            <button>✏️</button>
+                            <button>🗑️</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>NBA 2K25</td>
+                        <td>Esporte</td>
+                        <td><span class="rating green">L</span></td>
+                        <td>8/10</td>
+                        <td>2024</td>
+                        <td class="actions">
+                            <button>👁️</button>
+                            <button>✏️</button>
+                            <button>🗑️</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+    </div>
+</body>
+</html>
