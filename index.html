@@ -1,60 +1,60 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catálogo de Jogos</title>
-      <!-- Fonte Google Inria Serif -->
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet"> 
-  
-      <!-- Fonte Google Inter semiBold -->
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:ital,opsz,wght@1,14..32,509&display=swap" rel="stylesheet">
-  
-
-
     <link rel="stylesheet" href="/src/css/style.css">
 </head>
 <body>
-    <!-- Container header -->
-    <div class="container"> 
+    
+</body>
+</html>
+<body>
+    <div class="container">
         <header>
             <div class="logo">
                 <span><img src="src/img/logoControle.png" alt="imgControle"></span>
                 <h1 class="titulo">Code<br>Game</h1>
+                <div>
+                    <div>
+                        <input class="pesquisa" type="text" id="search" placeholder="Buscar jogo por nome" />
+                        <button class="buscar" id="searchButton">🔎</button>
+                      </div>
+                      
+                  </div>
             </div>
-            <!-- Modal Cadastrar -->
+
             <button id="openModal" class="open-modal-button">Cadastrar</button>
+
             <div id="modal" class="modal">
                 <div class="modal-content">
                     <header class="modal-header">
                         <button id="closeModal" class="close-button">&larr;</button>
-                        <div class="modal-logo"><img src="/src/img/logoControle.png" alt="modal-logo"></div>
+                        <div class="modal-logo"><img src="src/img/logoControle.png" alt="modal-logo"></div>
                     </header>
-                    
+
                     <h2>Novo Jogo</h2>
-                    <form>
+                    <form id="formCadastro">
                         <div class="form-row">
-                            <input type="text" placeholder="Nome">
-                            <input type="text" placeholder="Categoria">
+                            <input id="Nome" type="text" placeholder="Nome" required>
+                            <input id="Categoria" type="text" placeholder="Categoria" required>
                         </div>
                         <div class="form-row">
-                            <input type="text" placeholder="Classificação">
-                            <input type="text" placeholder="Avaliação">
+                            <input id="Classificação" type="text" placeholder="Classificação" required>
+                            <input id="Avaliação" type="text" placeholder="Avaliação" required>
                         </div>
                         <div class="form-row">
-                            <input type="text" placeholder="Lançamento">
-                            <input type="text" placeholder="Descrição">
+                            <input id="Lançamento" type="text" placeholder="Lançamento" required>
+                            <input id="Imagem" type="text" placeholder="Imagem" required>
                         </div>
-                        <button type="submit" class="confirm-button">Confirmar</button>
+                        <button type="submit" onclick="abrirModal()" class="confirm-button">Confirmar</button>
                     </form>
                 </div>
             </div>
-        
-            <script src="/src/js/script.js"></script>
+
+           
+
         </header>
 
         <main>
@@ -62,83 +62,62 @@
             <table>
                 <thead>
                     <tr>
-                        <th>ID</th>
+                        <th>Imagem</th>
                         <th>Nome</th>
                         <th>Categoria</th>
                         <th>Classificação</th>
                         <th>Avaliação</th>
                         <th>Lançamento</th>
                         <th>Opções</th>
+                        
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td class="actions">
-                    
-                            
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Call of Duty: Warzone</td>
-                        <td>Battle Royale</td>
-                        <td><span class="rating black">18</span></td>
-                        <td>8/10</td>
-                        <td>2020</td>
-                        <td class="actions">
-                           
-                            <button>✏️</button>
-                            <button>🗑️</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Grand Theft Auto V</td>
-                        <td>Ação</td>
-                        <td><span class="rating black">18</span></td>
-                        <td>9/10</td>
-                        <td>2013</td>
-                        <td class="actions">
-                        
-                            <button>✏️</button>
-                            <button>🗑️</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>The Last of Us</td>
-                        <td>Ação/Aventura</td>
-                        <td><span class="rating red">16</span></td>
-                        <td>9/10</td>
-                        <td>2014</td>
-                        <td class="actions">
-                          
-                            <button>✏️</button>
-                            <button>🗑️</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>NBA 2K25</td>
-                        <td>Esporte</td>
-                        <td><span class="rating green">L</span></td>
-                        <td>8/10</td>
-                        <td>2024</td>
-                        <td class="actions">
-                            
-                            <button>✏️</button>
-                            <button>🗑️</button>
-                        </td>
-                    </tr>
+                <tbody id="listaJogo">
+                  
                 </tbody>
             </table>
+
+            <dialog   id="modal-Excluir" class="modal-excluir" >
+                <div class="pergunta">
+                    <p>Realmente deseja excluir o Jogo?</p>
+                </div>
+
+                <div class="botoes">
+                    <button class="btnCancelar" onclick="cancelarExclusão()" id="cancelar">Cancelar</button>
+                    <button class="btnExcluir" onclick="excluirJogo()" id="excluir">Excluir</button>
+                </div>
+            </dialog>
+
+
+            <dialog id="modal-Editar" class="modal-alterar">
+                <div class="modal-header">
+                    <button id="closeModalAlterar" class="close-button">&larr;</button>
+                    <img src="src/img/logoControle.png" alt="Logo Controle" class="modal-logo">
+                </div>
+                <h2>Alterar Jogo</h2>
+                <form id="formAlterar">
+                    <div class="form-row">
+                        
+                    <input id="NomeEdicao" type="text" placeholder="Nome" required>
+                    <input id="CategoriaEdicao" type="text" placeholder="Categoria" required>
+                    </div>
+                    <div class="form-row">
+                    <input id="ClassificaçãoEdicao" type="text" placeholder="Classificação" required>
+                    <input id="AvaliaçãoEdicao" type="text" placeholder="Avaliação" required>
+                    </div>
+                    <div class="form-row">
+                    <input id="LançamentoEdicao" type="text" placeholder="Lançamento" required>
+                    <input id="ImagemEdicao" type="text" placeholder="Imagem" required>
+                    </div>
+                    <button type="submit" class="confirm-button">Confirmar</button>
+                </form>
+                </dialog>
+
+
+           
         </main>
     </div>
+
+    <script src="/src/js/script.js"></script>
 </body>
 </html>
