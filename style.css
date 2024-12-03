@@ -1,3 +1,5 @@
+
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -82,7 +84,7 @@ thead {
 }
 
 th, td {
-    padding: 10px;
+    padding: 20px 30px;
     text-align: center;
     border: 1px solid #444;
     background-color: #1e1e1e;
@@ -130,18 +132,6 @@ tbody tr:nth-child(odd) {
 .actions button:hover {
     background-color: #555;
 
-}
-
-/* Estilo geral */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #121212;
-    color: #fff;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
 }
 
 /* Botão para abrir a modal */
@@ -254,3 +244,115 @@ input::placeholder {
 .confirm-button:hover {
     background-color: #0056b3;
 }
+
+dialog.modal-excluir {
+    border: none;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #1e1e1e;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    color: white;
+    width: 320px;
+    text-align: center;
+  }
+
+  .modal-excluir::backdrop {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+
+  .pergunta p {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  .botoes {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .btnCancelar, .btnExcluir {
+    width: 48%;
+    padding: 10px 0;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .btnCancelar {
+    background-color: #fff;
+    color: black;
+  }
+
+  .btnCancelar:hover {
+    background-color: #e0e0e0;
+  }
+
+  .btnExcluir {
+    background-color: #d50000;
+    color: white;
+  }
+
+  .btnExcluir:hover {
+    background-color: #c40000;
+  }
+
+
+dialog.modal-alterar {
+    background-color: #1c1c1c;
+    border-radius: 10px;
+    padding: 20px;
+    width: 400px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+/* Cabeçalho da modal */
+dialog.modal-alterar-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+
+.capas{
+    width: 150px;
+    height: 100px;
+}
+
+
+
+
+.alterar{
+    background-color: #1c1c1c;
+}
+
+.excluir{
+    background-color: #1c1c1c;
+}
+
+.pesquisa{
+    margin-left: 800px;
+
+}
+
+.buscar{
+    background-color: #30B5F7;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+   
+    
+  
+    
+}
+
+
+
+
+
+
+  
+ 
